@@ -83,7 +83,7 @@ const Main = () => {
                         {input ? <img onClick={()=>onSent()} src={assets.send_icon} alt="" /> : null}
                     </div>
                 </div>
-                <p className="bottom-info">Gemini may display incorrect info, icluding about people, so double check its responses </p>
+                <p className="bottom-info">Gemini may display incorrect info, including about people, so double check its responses </p>
             </div>
         </div>
     </div>
