@@ -7,6 +7,13 @@ const Main = () => {
 
     const {onSent,recentPrompt,showResult,loading,resultData,setInput,input} = useContext(Context)
 
+    function handleKeyPress(e){
+        if(e.key === 'Enter'){
+            e.preventDefault()
+            onSent(input)
+        }
+    }
+
 
 
 
@@ -75,7 +82,7 @@ const Main = () => {
 
             <div className="main-bottom">
                 <div className="search-box">
-                    <input onChange={(e)=>setInput(e.target.value)} value={input} type="text" placeholder='Ask Gemini' />
+                    <input onKeyDown={handleKeyPress} onChange={(e)=>setInput(e.target.value)} value={input} type="text" placeholder='Ask Gemini' />
 
                     <div>
                         <img src={assets.gallery_icon} alt="" />
