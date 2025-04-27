@@ -10,7 +10,7 @@ const Main = () => {
     function handleKeyPress(e){
         if(e.key === 'Enter'){
             e.preventDefault()
-            onSent(input)
+            onSent()
         }
     }
 
